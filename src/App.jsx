@@ -1,11 +1,13 @@
 import './App.css'
+import { Button } from 'flowbite-react'
+import NavBar from './Components/NavBarr'
+import Footerr from './Components/Footerr'
 
 function App() {
-
-
   return (
     <div>
-      <h1>Dev mulkalwar</h1>
+      <NavBar/>
+      <Footerr/>
     </div>
   )
 }
