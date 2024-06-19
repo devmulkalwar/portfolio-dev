@@ -7,7 +7,7 @@ function App() {
   return (
     <div>
       <NavBarr/>
-        {/* <Outlet/> */}
+        <Outlet/>
       <Footerr/>
     </div>
   )

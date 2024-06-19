@@ -1,8 +1,15 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { Navbar, ToggleSwitch } from "flowbite-react";
+import { Link } from "react-router-dom";
 
-const NavBar = () => {
+const NavBarr = () => {
+  const [isToggled, setIsToggled] = useState(false);
+
+  const handleToggleChange = (checked) => {
+    setIsToggled(checked);
+  };
+
   return (
     <Navbar fluid rounded>
       <Navbar.Brand href="https://flowbite-react.com">
@@ -16,20 +23,32 @@ const NavBar = () => {
         </span>
       </Navbar.Brand>
       <div className="flex md:order-2">
-      <ToggleSwitch checked={switch2} label="Toggle me (checked)" onChange={setSwitch2} />
+        <ToggleSwitch
+          checked={isToggled}
+          label="Toggle me (checked)"
+          onChange={handleToggleChange}
+        />
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
-        <Navbar.Link href="#" active>
+        <Navbar.Link as={Link} to="/" active>
           Home
         </Navbar.Link>
-        <Navbar.Link href="#">About</Navbar.Link>
-        <Navbar.Link href="#">Services</Navbar.Link>
-        <Navbar.Link href="#">Projects</Navbar.Link>
-        <Navbar.Link href="#">Contact</Navbar.Link>
+        <Navbar.Link as={Link} to="/about">
+          About
+        </Navbar.Link>
+        <Navbar.Link as={Link} to="/services">
+          Services
+        </Navbar.Link>
+        <Navbar.Link as={Link} to="/projects">
+          Projects
+        </Navbar.Link>
+        <Navbar.Link as={Link} to="/contact">
+          Contact
+        </Navbar.Link>
       </Navbar.Collapse>
     </Navbar>
   );
 };
 
-export default NavBar;
+export default NavBarr;
