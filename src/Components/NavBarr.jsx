@@ -1,10 +1,11 @@
 "use client";
 import React, { useState } from "react";
 import { Navbar, ToggleSwitch } from "flowbite-react";
-import { Link } from "react-router-dom";
+import { Link,useLocation } from "react-router-dom";
 
 const NavBarr = () => {
   const [isToggled, setIsToggled] = useState(false);
+  const location = useLocation();
 
   const handleToggleChange = (checked) => {
     setIsToggled(checked);
@@ -31,19 +32,35 @@ const NavBarr = () => {
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
-        <Navbar.Link as={Link} to="/" active>
+        <Navbar.Link as={Link} to="/" active={location.pathname === "/"}>
           Home
         </Navbar.Link>
-        <Navbar.Link as={Link} to="/about">
+        <Navbar.Link
+          as={Link}
+          to="/about"
+          active={location.pathname === "/about"}
+        >
           About
         </Navbar.Link>
-        <Navbar.Link as={Link} to="/services">
+        <Navbar.Link
+          as={Link}
+          to="/services"
+          active={location.pathname === "/services"}
+        >
           Services
         </Navbar.Link>
-        <Navbar.Link as={Link} to="/projects">
+        <Navbar.Link
+          as={Link}
+          to="/projects"
+          active={location.pathname === "/projects"}
+        >
           Projects
         </Navbar.Link>
-        <Navbar.Link as={Link} to="/contact">
+        <Navbar.Link
+          as={Link}
+          to="/contact"
+          active={location.pathname === "/contact"}
+        >
           Contact
         </Navbar.Link>
       </Navbar.Collapse>
