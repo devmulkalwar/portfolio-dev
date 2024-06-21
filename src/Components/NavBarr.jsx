@@ -26,7 +26,6 @@ const NavBarr = () => {
       <div className="flex md:order-2">
         <ToggleSwitch
           checked={isToggled}
-          label="Toggle me (checked)"
           onChange={handleToggleChange}
         />
         <Navbar.Toggle />
