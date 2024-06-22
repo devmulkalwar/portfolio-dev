@@ -22,13 +22,13 @@ const Footerr = () => {
         </div>
         <Footer.Divider />
         <div className="w-full sm:flex sm:items-center sm:justify-between">
-          <Footer.Copyright href="#" by="Flowbite™" year={2022} />
+          <Footer.Copyright href="#" by="Made with love by Dev™" year={2024} />
           <div className="mt-4 flex space-x-6 sm:mt-0 sm:justify-center">
-            <Footer.Icon href="https://www.facebook.com/dev.mulkalwar/" icon={BsFacebook} />
-            <Footer.Icon href="https://www.instagram.com/dev_mulkalwar/?fbclid=IwZXh0bgNhZW0CMTAAAR2Qdj7W6Qxq9oc0bQwQanVSGBkf6ps0_R09Wz6daHbM4LswA2EFW5f3EKc_aem_ZmFrZWR1bW15MTZieXRlcw" icon={BsInstagram} />
-            <Footer.Icon href="https://x.com/dev_mulkalwar" icon={BsTwitterX} />
-            <Footer.Icon href="https://github.com/devmulkalwar" icon={BsGithub} />
-            <Footer.Icon href="https://www.linkedin.com/in/dev-mulkalwar-b2745a258/" icon={BsLinkedin} />
+            <Footer.Icon target="_blank" href="https://www.facebook.com/dev.mulkalwar/" icon={BsFacebook} />
+            <Footer.Icon target="_blank" href="https://www.instagram.com/dev_mulkalwar/?fbclid=IwZXh0bgNhZW0CMTAAAR2Qdj7W6Qxq9oc0bQwQanVSGBkf6ps0_R09Wz6daHbM4LswA2EFW5f3EKc_aem_ZmFrZWR1bW15MTZieXRlcw" icon={BsInstagram} />
+            <Footer.Icon target="_blank" href="https://x.com/dev_mulkalwar" icon={BsTwitterX} />
+            <Footer.Icon target="_blank" href="https://github.com/devmulkalwar" icon={BsGithub} />
+            <Footer.Icon target="_blank" href="https://www.linkedin.com/in/dev-mulkalwar-b2745a258/" icon={BsLinkedin} />
           </div>
         </div>
       </div>
