@@ -27,8 +27,11 @@ const NavBarr = () => {
         <ToggleSwitch
           checked={isToggled}
           onChange={handleToggleChange}
-        />
+        /> 
         <Navbar.Toggle />
+        <ToggleSwitch checked={true} label="Toggle me" onChange={()=>{
+          alert("button clicked")
+        }} />
       </div>
       <Navbar.Collapse>
         <Navbar.Link as={Link} to="/" active={location.pathname === "/"}>
