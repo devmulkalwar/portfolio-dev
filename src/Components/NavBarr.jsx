@@ -4,12 +4,7 @@ import { Navbar, ToggleSwitch } from "flowbite-react";
 import { Link,useLocation } from "react-router-dom";
 
 const NavBarr = () => {
-  const [isToggled, setIsToggled] = useState(false);
   const location = useLocation();
-
-  const handleToggleChange = (checked) => {
-    setIsToggled(checked);
-  };
 
   return (
     <Navbar fluid rounded>
@@ -23,16 +18,7 @@ const NavBarr = () => {
           Portfolio
         </span>
       </Navbar.Brand>
-      <div className="flex md:order-2">
-        <ToggleSwitch
-          checked={isToggled}
-          onChange={handleToggleChange}
-        /> 
-        <Navbar.Toggle />
-        <ToggleSwitch checked={true} label="Toggle me" onChange={()=>{
-          alert("button clicked")
-        }} />
-      </div>
+     
       <Navbar.Collapse>
         <Navbar.Link as={Link} to="/" active={location.pathname === "/"}>
           Home

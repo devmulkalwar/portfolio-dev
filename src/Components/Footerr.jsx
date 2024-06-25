@@ -25,7 +25,7 @@ const Footerr = () => {
             <Footer.Link
               as={Link}
               to="/about"
-              active={location.pathname === "/contact"}
+              active={location.pathname === "/about"}
             >
               About
             </Footer.Link>
