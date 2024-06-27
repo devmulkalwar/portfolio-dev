@@ -2,7 +2,7 @@
 "use client";
 
 import { Card } from "flowbite-react";
-import Image from "../assets/images/model.jpg";
+import Image from "next/image";
 
 export function Component() {
   return (
